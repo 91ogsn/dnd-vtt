@@ -20,19 +20,19 @@ Projektet är fortfarande i ett tidigt utvecklingsstadium.
 
 ## Funktioner hittills
 
-- Visning av spelkarta
 - Grid-baserad spelplan
-- Tokens på kartan
-- Drag and drop av tokens
-- Kommunikation mellan frontend och backend med SignalR
+- Visning av tokens på spelplanen
+- Grundläggande frontend i React/TypeScript och PixiJS
+- Backend i ASP.NET Core
+- Påbörjad realtidskommunikation med SignalR
 
 ## Planerade funktioner
 
-- Fler spelare i samma session
+- Drag and drop av tokens
+- Snap-to-grid för tokens
+- Synkronisering av tokens mellan spelare
 - Persistens av spelstatus
-- Karaktärer och tokens
 - Fler verktyg för Dungeon Master
-- Vidareutveckling av kart- och stridssystemet
 
 ## Status
 

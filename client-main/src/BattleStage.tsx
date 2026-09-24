@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { Stage, Graphics, Sprite, Container } from "@pixi/react";
 import { HubConnection, HubConnectionBuilder, LogLevel } from "@microsoft/signalr";
 import * as PIXI from "pixi.js";
-import testMap from "./assets/maps/forest-test.png";
 
 type GameState = {
     map: { id: string; imageUrl: string; gridSize: number };
@@ -311,7 +310,7 @@ export default function BattleStage() {
         >
             {/*  MAP IMAGE LAYER (BAKOM ALLT) */}
             <Sprite
-                image={state.map.imageUrl && state.map.imageUrl.trim() !== "" ? state.map.imageUrl : testMap}
+                image={state.map.imageUrl}
                 x={0}
                 y={0}
                 width={width}
@@ -335,7 +334,7 @@ export default function BattleStage() {
                         cursor="pointer"
                         hitArea={new PIXI.Rectangle(0, 0, cellSize, cellSize)}
                         onpointerdown={(e: any) => {
-                            const pos = getStagePos(e);
+                            const pos = getWorldPos(e);
                             if (!pos) return;
 
                             const tokenPxX = t.x * cellSize;

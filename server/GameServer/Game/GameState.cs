@@ -9,7 +9,7 @@ public class GameState
 public class Map
 {
     public string Id { get; set; } = "forest-01";
-    public string ImageUrl { get; set; } = "/maps/forest.jpg";
+    public string ImageUrl { get; set; } = "/maps/forest-test.png";
     public int GridSize { get; set; } = 64;
 }
 
